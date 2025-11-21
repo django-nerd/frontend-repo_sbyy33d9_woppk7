@@ -1,11 +1,16 @@
 import TerminalHero from './components/TerminalHero'
 import Services from './components/Services'
 import Contact from './components/Contact'
+import MatrixRain from './components/MatrixRain'
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-pink-300 font-mono crt-flicker">
-      <div className="fixed inset-0 pointer-events-none opacity-25"
+    <div className="min-h-screen bg-black text-pink-300 font-mono crt-flicker relative overflow-hidden">
+      {/* Matrix rain background */}
+      <MatrixRain opacity={0.18} speed={40} fontSize={16} color="#ec4899" />
+
+      {/* Dotted grid overlay */}
+      <div className="fixed inset-0 pointer-events-none opacity-25 z-0"
            style={{backgroundImage: 'radial-gradient(circle at 1px 1px, #ec4899 1px, transparent 1px)', backgroundSize: '22px 22px'}} />
 
       <header className="relative z-10 w-full max-w-5xl mx-auto px-6 pt-8 flex items-center justify-between">
